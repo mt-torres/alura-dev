@@ -1,0 +1,35 @@
+.menu-lateral{
+    display: flex;
+    flex-direction: column;
+    width: 189px;
+    height: 146px;
+
+    &__titulo{
+        @include titulos;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        margin:1rem 0 ;
+    }
+    
+    &__item--inativo{
+        color: $inactive ;
+    }
+
+    &__link{
+        width: 48px;
+        height: 48px;
+        margin-right: 1rem;
+    }
+
+    &__link--editor{
+        background: url(../../image/editorAtivo.png);
+    }
+
+    &__link--comunidade{
+        background: url(../../image/comunidade.png);
+        
+    }
+}

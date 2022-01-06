@@ -1,0 +1,27 @@
+.projeto-codigo{
+    display: flex;
+    flex-direction: column;
+    width: 752px;
+   
+
+    &__editor{
+        resize: none;
+        height: 366px;
+        border: 32px solid #6BD1FF ;
+        background-color: $dark-gray;
+        color: $white;
+        border-radius: 8px;
+
+
+    }
+
+    &__botao{
+        margin-top: 2rem;
+        @include botao;
+        background-color: rgba(80, 129, 251, 0.08);;
+        color: $white;
+    }
+
+
+
+}

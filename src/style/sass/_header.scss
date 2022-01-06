@@ -1,0 +1,37 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        background-image: url(../../image/Logo.svg);
+        width: 145px;
+        height: 34.05px;
+    }
+
+    &__busca {
+        width: 752px;
+        @include input-text; 
+        margin-right: 4.5rem;
+    }
+
+    &__usuario {
+        width: 106px;
+        height: 56px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .usuario__foto{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+    
+        .usuario__foto {
+            font-size: 1rem;
+    
+        }
+    }
+
+}
