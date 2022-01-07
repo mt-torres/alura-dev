@@ -1,8 +1,9 @@
 .menu-lateral{
     display: flex;
     flex-direction: column;
-    width: 189px;
-    height: 146px;
+    flex-grow: 1;
+    max-width: 189px;
+    margin-right: 8.9%;
 
     &__titulo{
         @include titulos;

@@ -1,17 +1,20 @@
 .projeto-codigo{
     display: flex;
     flex-direction: column;
-    position: absolute;
+    flex-grow: 3;
+    max-width: 752px;
+   /*  position: absolute;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0); */
     
     
     
    
     &__container{
         box-sizing: border-box;
-        width: 752px;
+       
+       
         height: 366px;
         display: flex;
         flex-direction: column;

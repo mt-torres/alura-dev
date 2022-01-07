@@ -10,9 +10,11 @@
     }
 
     &__busca {
-        width: 752px;
+        flex-grow: 2;
+        max-width: 752px;
+        height: 56px;
         @include input-text; 
-        //margin-right: 2.2rem;
+        margin-right:2.9%;
     }
 
     &__usuario {

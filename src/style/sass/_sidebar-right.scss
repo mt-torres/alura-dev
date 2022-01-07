@@ -1,8 +1,9 @@
 .dados-projeto{
-    width: 272px;
+    max-width: 272px;
     display: flex;
     flex-direction: column;
-    margin-left: 1.5rem;
+    margin-left: 2.5rem;
+    flex-grow: 1;
     
 
     &__titulo{
@@ -14,10 +15,11 @@
         @include input-text;
         margin-bottom: 1rem;
     }
-
+    
     &__descricao{
         @include input-text;
         margin-bottom: 2.5rem;
+        height: 80px;
 
     }
 
@@ -29,7 +31,7 @@
 
     &__cor{
         border-radius: 8px;
-        width: 272px;
+        width: 100%;
         height: 56px;
         background-color: $dark-blue;
         
@@ -37,7 +39,7 @@
     }
 
     &__botao{
-        margin-top: 2rem;
+        margin-top: 2.5rem;
         @include botao;
         background-color: $blue-300;
         color: $dark-blue;
