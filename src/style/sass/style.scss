@@ -15,6 +15,7 @@ $background-gray:rgba(255, 255, 255, 0.16);
     outline: none;
     padding: 1rem;
     color: inherit; 
+    box-sizing: border-box;
 }
 
 @mixin titulos {

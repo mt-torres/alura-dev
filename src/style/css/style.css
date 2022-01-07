@@ -17,7 +17,7 @@
   outline: none;
   padding: 1rem;
   color: inherit;
-  margin-right: 4.5rem;
+  box-sizing: border-box;
 }
 .cabecalho__usuario {
   width: 106px;
@@ -39,6 +39,7 @@
   margin-top: 2.5rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .menu-lateral {
@@ -77,6 +78,7 @@
   width: 272px;
   display: flex;
   flex-direction: column;
+  margin-left: 1.5rem;
 }
 .dados-projeto__titulo {
   font-size: 0.75rem;
@@ -93,6 +95,7 @@
   outline: none;
   padding: 1rem;
   color: inherit;
+  box-sizing: border-box;
   margin-bottom: 1rem;
 }
 .dados-projeto__descricao {
@@ -103,6 +106,7 @@
   outline: none;
   padding: 1rem;
   color: inherit;
+  box-sizing: border-box;
   margin-bottom: 2.5rem;
 }
 .dados-projeto__linguagem {
@@ -113,6 +117,7 @@
   outline: none;
   padding: 1rem;
   color: inherit;
+  box-sizing: border-box;
   margin-bottom: 1rem;
 }
 .dados-projeto__cor {
@@ -136,15 +141,59 @@
 .projeto-codigo {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+}
+.projeto-codigo__container {
+  box-sizing: border-box;
   width: 752px;
+  height: 366px;
+  display: flex;
+  flex-direction: column;
+  background-color: #6Bd1FF;
+  padding: 2rem;
+  border-radius: 8px;
+}
+.projeto-codigo .circulos {
+  display: flex;
+  height: 52px;
+  background-color: #141414;
+  border-radius: 8px 8px 0 0;
+  padding-top: 1rem;
+}
+.projeto-codigo .circulos__vermelho {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+.projeto-codigo .circulos__amarelo {
+  width: 12px;
+  height: 12px;
+  background-color: yellow;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.projeto-codigo .circulos__verde {
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
 }
 .projeto-codigo__editor {
+  margin-top: 0;
   resize: none;
-  height: 366px;
-  border: 32px solid #6BD1FF;
+  border: none;
   background-color: #141414;
   color: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
+  outline: none;
+  height: 100%;
+  padding: 0 1rem;
 }
 .projeto-codigo__botao {
   margin-top: 2rem;

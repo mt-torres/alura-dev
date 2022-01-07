@@ -2,6 +2,8 @@
     width: 272px;
     display: flex;
     flex-direction: column;
+    margin-left: 1.5rem;
+    
 
     &__titulo{
         @include titulos;

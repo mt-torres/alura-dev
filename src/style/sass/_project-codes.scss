@@ -1,17 +1,70 @@
 .projeto-codigo{
     display: flex;
     flex-direction: column;
-    width: 752px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    
+    
+    
    
+    &__container{
+        box-sizing: border-box;
+        width: 752px;
+        height: 366px;
+        display: flex;
+        flex-direction: column;
+        background-color: #6Bd1FF;
+        padding: 2rem;
+        border-radius: 8px
+        
+    }
+
+    .circulos{
+        display: flex;
+        height: 52px;
+        background-color: $dark-gray;
+        border-radius: 8px 8px 0 0;
+        padding-top: 1rem;
+
+        &__vermelho{
+            width: 12px;
+            height: 12px;  
+            background-color: red;  
+            border-radius: 50%;
+            margin-left: 1rem;
+            margin-right: .5rem;
+        }
+        &__amarelo{
+            width: 12px;
+            height: 12px;  
+            background-color: yellow;  
+            border-radius: 50%;
+            margin-right: .5rem;
+        }
+        &__verde{
+            width: 12px;
+            height: 12px;  
+            background-color: green;  
+            border-radius: 50%;
+        }
+    }
+
 
     &__editor{
+        margin-top: 0;
         resize: none;
-        height: 366px;
-        border: 32px solid #6BD1FF ;
+        //height: 366px;
+        //border: 32px solid #6BD1FF ;
+        border: none;
         background-color: $dark-gray;
         color: $white;
-        border-radius: 8px;
-
+        border-radius: 0 0 8px 8px;
+        outline: none;
+        height: 100%;
+        padding: 0 1rem;
+        
 
     }
 
