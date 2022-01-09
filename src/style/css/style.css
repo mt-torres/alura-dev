@@ -7,6 +7,7 @@
   background-image: url(../../image/Logo.svg);
   width: 145px;
   height: 34.05px;
+  margin-right: 2rem;
 }
 .cabecalho__busca {
   flex-grow: 2;
@@ -20,7 +21,7 @@
   padding: 1rem;
   color: inherit;
   box-sizing: border-box;
-  margin-right: 2.9%;
+  margin-right: 4.1rem;
 }
 .cabecalho__usuario {
   width: 106px;
@@ -42,6 +43,7 @@
   margin-top: 2.5rem;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .menu-lateral {
@@ -66,15 +68,28 @@
   color: #919ca9;
 }
 .menu-lateral__link {
+  border-radius: 16px;
   width: 48px;
   height: 48px;
   margin-right: 1rem;
+  transition: opacity 0.2s linear;
+}
+.menu-lateral__link:hover {
+  opacity: 0.64;
 }
 .menu-lateral__link--editor {
-  background: url(../../image/editorAtivo.png);
+  background: url(../../image/editorAtivo.svg) no-repeat center #5081FB;
+}
+.menu-lateral__link--editor-inativo {
+  background: url(../../image/editorAtivo.svg) no-repeat center #5081FB;
+  opacity: 0.16;
 }
 .menu-lateral__link--comunidade {
-  background: url(../../image/comunidade.png);
+  background: url(../../image/comunidadeAtivo.svg) no-repeat center #5081FB;
+}
+.menu-lateral__link--comunidade-inativo {
+  background: url(../../image/comunidadeAtivo.svg) no-repeat center #5081FB;
+  opacity: 0.16;
 }
 
 .dados-projeto {
@@ -146,12 +161,11 @@
 .projeto-codigo {
   display: flex;
   flex-direction: column;
-  flex-grow: 3;
+  flex-grow: 2;
   max-width: 752px;
-  /*  position: absolute;
-   left: 50%;
-   margin-right: -50%;
-   transform: translate(-50%, 0); */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
 }
 .projeto-codigo__container {
   box-sizing: border-box;
@@ -168,38 +182,54 @@
   background-color: #141414;
   border-radius: 8px 8px 0 0;
   padding-top: 1rem;
+  width: 100%;
 }
 .projeto-codigo .circulos__vermelho {
+  background-color: red;
   width: 12px;
   height: 12px;
-  background-color: red;
   border-radius: 50%;
   margin-left: 1rem;
   margin-right: 0.5rem;
 }
 .projeto-codigo .circulos__amarelo {
+  background-color: yellow;
   width: 12px;
   height: 12px;
-  background-color: yellow;
   border-radius: 50%;
+  margin-left: 0;
   margin-right: 0.5rem;
 }
 .projeto-codigo .circulos__verde {
+  background-color: green;
   width: 12px;
   height: 12px;
-  background-color: green;
   border-radius: 50%;
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+.projeto-codigo__code-area {
+  box-sizing: border-box;
+  height: 302px;
+  width: 100%;
+  background-color: #141414;
+  padding: 0 1rem;
+  border-radius: 0 0 8px 8px;
+  overflow-x: auto;
 }
 .projeto-codigo__editor {
-  margin-top: 0;
-  resize: none;
-  border: none;
-  background-color: #141414;
   color: #FFFFFF;
-  border-radius: 0 0 8px 8px;
+  background-color: #141414;
+  display: block;
+  height: 90%;
+  line-height: 1.5rem;
+  max-width: 90%;
+  width: 100%;
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: auto;
   outline: none;
-  height: 100%;
-  padding: 0 1rem;
+  white-space: pre;
 }
 .projeto-codigo__botao {
   margin-top: 2rem;
@@ -211,6 +241,9 @@
   cursor: pointer;
   background-color: rgba(80, 129, 251, 0.08);
   color: #FFFFFF;
+}
+.projeto-codigo .hljs {
+  box-sizing: border-box;
 }
 
 body {

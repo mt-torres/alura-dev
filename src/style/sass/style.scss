@@ -14,7 +14,7 @@ $background-gray:rgba(255, 255, 255, 0.16);
     border: none;
     outline: none;
     padding: 1rem;
-    color: inherit; 
+    color: inherit;
     box-sizing: border-box;
 }
 
@@ -30,17 +30,28 @@ $background-gray:rgba(255, 255, 255, 0.16);
     border-radius: 8px;
     padding: 1rem;
     border: none;
-    line-height: 1.5rem; 
+    line-height: 1.5rem;
     font-size: 1rem;
     cursor: pointer
-    
+}
+
+@mixin circulos ($color, $left, $right) {
+    background-color: $color;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: $left;
+    margin-right: $right;
+  
 }
 
 
-@import 'header', 'project', 'sidebar-left', 'sidebar-right', 'project-codes';
 
 
-body{
+@import 'header', 'project', 'sidebar-left', 'sidebar-right', 'editor-codes';
+
+
+body {
     background-color: $dark-blue;
     font-family: 'Inter', sans-serif;
     color: white;

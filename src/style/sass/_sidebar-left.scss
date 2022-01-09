@@ -20,17 +20,34 @@
     }
 
     &__link{
+        border-radius: 16px;
         width: 48px;
         height: 48px;
         margin-right: 1rem;
+        transition: opacity .2s linear;
+        
+        &:hover{
+            opacity: .64;
+
+        }
     }
 
     &__link--editor{
-        background: url(../../image/editorAtivo.png);
+        background: url(../../image/editorAtivo.svg) no-repeat center  $blue-300 ;
     }
-
+    &__link--editor-inativo{
+        background: url(../../image/editorAtivo.svg) no-repeat center  $blue-300 ;
+        opacity: .16;
+    } 
+    
     &__link--comunidade{
-        background: url(../../image/comunidade.png);
+        background: url(../../image/comunidadeAtivo.svg) no-repeat center  $blue-300;
+       
         
     }
+    &__link--comunidade-inativo{
+        background: url(../../image/comunidadeAtivo.svg) no-repeat center  $blue-300;
+        opacity: .16;
+        
+    } 
 }
