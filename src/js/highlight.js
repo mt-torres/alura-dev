@@ -4,7 +4,7 @@ const btnHl = document.querySelector("[ data-codigo=button]");
 
 codeArea.addEventListener('click', ()=> {
     codeEditor.focus();
-    console.log(codeEditor)
+    
 })
 
 
@@ -14,6 +14,7 @@ btnHl.addEventListener('click',(evento)=> {
     codeArea.innerHTML = `<code class="projeto-codigo__editor hljs language-${language}"  data-codigo="code" spellcheck="false" contenteditable="true"></code>`;
     codeArea.querySelector('code').textContent = codigo
     hljs.highlightElement(codeArea.querySelector('code'))
+
 })
 
 
