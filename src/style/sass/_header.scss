@@ -1,13 +1,14 @@
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.9fr 2.5fr .9fr ;
     align-items: center;
+    gap: 2.5rem;
 
     &__logo {
         background-image: url(../../image/Logo.svg);
         width: 145px;
         height: 34.05px;
-        margin-right:2rem ;
+        
     }
 
     &__busca {
@@ -15,10 +16,11 @@
         max-width: 752px;
         height: 56px;
         @include input-text; 
-        margin-right:4.1rem;
+       
     }
 
     &__usuario {
+        justify-self: end;
         width: 106px;
         height: 56px;
         display: flex;

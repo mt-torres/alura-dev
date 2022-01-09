@@ -1,8 +1,8 @@
 .projeto{
     margin-top: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-      
+    display: grid;
+    grid-template-columns: 0.9fr 2.5fr .9fr ;
+    box-sizing: border-box; 
+    gap: 2.5rem; 
     
 }

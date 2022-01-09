@@ -1,13 +1,13 @@
 .cabecalho {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 0.9fr 2.5fr 0.9fr;
   align-items: center;
+  gap: 2.5rem;
 }
 .cabecalho__logo {
   background-image: url(../../image/Logo.svg);
   width: 145px;
   height: 34.05px;
-  margin-right: 2rem;
 }
 .cabecalho__busca {
   flex-grow: 2;
@@ -21,9 +21,9 @@
   padding: 1rem;
   color: inherit;
   box-sizing: border-box;
-  margin-right: 4.1rem;
 }
 .cabecalho__usuario {
+  justify-self: end;
   width: 106px;
   height: 56px;
   display: flex;
@@ -41,9 +41,10 @@
 
 .projeto {
   margin-top: 2.5rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 0.9fr 2.5fr 0.9fr;
   box-sizing: border-box;
+  gap: 2.5rem;
 }
 
 .menu-lateral {
@@ -51,7 +52,6 @@
   flex-direction: column;
   flex-grow: 1;
   max-width: 189px;
-  margin-right: 8.9%;
 }
 .menu-lateral__titulo {
   font-size: 0.75rem;
@@ -96,8 +96,8 @@
   max-width: 272px;
   display: flex;
   flex-direction: column;
-  margin-left: 2.5rem;
-  flex-grow: 1;
+  justify-self: end;
+  width: 100%;
 }
 .dados-projeto__titulo {
   font-size: 0.75rem;
@@ -159,6 +159,7 @@
 }
 
 .projeto-codigo {
+  justify-self: center;
   display: flex;
   flex-direction: column;
   flex-grow: 2;
