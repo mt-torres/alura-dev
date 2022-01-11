@@ -4,6 +4,17 @@
   align-items: center;
   gap: 2.5rem;
 }
+@media (max-width: 900px) {
+  .cabecalho {
+    grid-template-columns: 0.9fr 2.5fr 0.2fr;
+  }
+}
+@media (max-width: 460px) {
+  .cabecalho {
+    grid-template-columns: 0.9fr 2.5fr 0.2fr;
+    gap: 1.2rem;
+  }
+}
 .cabecalho__logo {
   background-image: url(../../image/Logo.svg);
   width: 145px;
@@ -24,6 +35,28 @@
   box-sizing: border-box;
   justify-self: center;
 }
+@media (max-width: 460px) {
+  .cabecalho__busca {
+    width: 0;
+    background-image: url(../../image/lupa.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-color: #051D3B;
+    justify-self: end;
+  }
+}
+.cabecalho__menu {
+  display: none;
+  width: 20px;
+  height: 17.5px;
+  justify-self: end;
+  background: url(../../image/hamburguer.svg) no-repeat;
+}
+@media (max-width: 900px) {
+  .cabecalho__menu {
+    display: block;
+  }
+}
 .cabecalho__usuario {
   justify-self: end;
   width: 106px;
@@ -31,6 +64,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 900px) {
+  .cabecalho__usuario {
+    display: none;
+  }
 }
 .cabecalho__usuario .usuario__foto {
   width: 32px;
@@ -48,12 +86,24 @@
   box-sizing: border-box;
   gap: 2.5rem;
 }
+@media (max-width: 900px) {
+  .projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .menu-lateral {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   max-width: 189px;
+}
+@media (max-width: 900px) {
+  .menu-lateral {
+    display: none;
+  }
 }
 .menu-lateral__titulo {
   font-size: 0.75rem;
@@ -101,6 +151,11 @@
   justify-self: end;
   width: 100%;
 }
+@media (max-width: 900px) {
+  .dados-projeto {
+    max-width: 100%;
+  }
+}
 .dados-projeto__titulo {
   font-size: 0.75rem;
   line-height: 1.125rem;
@@ -131,6 +186,16 @@
   margin-bottom: 2.5rem;
   height: 80px;
 }
+@media (max-width: 900px) {
+  .dados-projeto__customizacao {
+    display: flex;
+  }
+}
+@media (max-width: 460px) {
+  .dados-projeto__customizacao {
+    flex-direction: column;
+  }
+}
 .dados-projeto__linguagem {
   border-radius: 8px;
   font-size: 1rem;
@@ -141,6 +206,12 @@
   color: inherit;
   box-sizing: border-box;
   margin-bottom: 1rem;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .dados-projeto__linguagem {
+    margin-right: 1rem;
+  }
 }
 .dados-projeto__cor {
   border-radius: 8px;
@@ -149,7 +220,7 @@
   background-color: #051D3B;
 }
 .dados-projeto__botao {
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   border-radius: 8px;
   padding: 1rem;
   border: none;
@@ -158,6 +229,11 @@
   cursor: pointer;
   background-color: #5081FB;
   color: #051D3B;
+}
+@media (max-width: 900px) {
+  .dados-projeto__botao {
+    margin-top: 1rem;
+  }
 }
 
 .projeto-codigo {
@@ -254,6 +330,12 @@
   grid-template-columns: 0.88fr 3fr;
   gap: 0;
 }
+@media (max-width: 900px) {
+  .projeto__comunidade {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .social-conatainer {
   width: 100%;
@@ -261,14 +343,36 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
+@media (max-width: 900px) {
+  .social-conatainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .projeto-codigo--social {
   max-width: 520px;
   max-height: 464px;
 }
+@media (max-width: 900px) {
+  .projeto-codigo--social {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 
 .projeto-codigo__container--social {
   max-height: 288px;
+}
+@media (max-width: 900px) {
+  .projeto-codigo__container--social {
+    max-height: 366px;
+  }
+}
+
+.cabecalho__usuario--social {
+  display: inline-flex;
 }
 
 .projeto-codigo__dados {
@@ -293,7 +397,7 @@
   display: grid;
   grid-template-columns: 0.2fr 0.2fr 1fr;
   align-items: center;
-  max-height: 244px;
+  max-height: 176px;
   padding: 0.875rem;
 }
 .projeto-codigo__dados .descricao__social .social__comentarios {
@@ -302,6 +406,7 @@
   padding-left: 1.9rem;
   grid-column: 1;
   height: 20px;
+  margin-right: 1rem;
 }
 .projeto-codigo__dados .descricao__social .social__like {
   background: url(../../image/like.svg) no-repeat;
@@ -319,6 +424,20 @@ body {
   margin: 2rem;
   border-radius: 40px;
   position: relative;
+}
+@media (max-width: 460px) {
+  body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    max-width: 1376px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

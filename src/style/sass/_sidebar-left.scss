@@ -4,6 +4,13 @@
     flex-grow: 1;
     max-width: 189px;
 
+    @include tablet{
+      display: none 
+      
+      
+    }
+
+
     &__titulo{
         @include titulos;
     }

@@ -48,6 +48,19 @@ $background-editorSocial: rgba(0, 0, 0, 0.16);
   
 }
 
+@mixin monitor {
+    @media (min-width: 1440px) {@content}
+    
+}
+@mixin tablet {
+    @media (max-width: 900px) {@content}
+    
+}
+
+@mixin phone {
+    @media (max-width: 460px) {@content}
+    
+}
 
 
 
@@ -61,4 +74,18 @@ body {
     margin: 2rem;
     border-radius: 40px;
     position: relative;
+
+    @include phone{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    @include monitor{
+        max-width: 1376px ;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 }

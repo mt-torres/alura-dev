@@ -4,8 +4,12 @@
     flex-direction: column;
     justify-self: end;
     width: 100%;
-    
 
+    @include tablet{
+        max-width: 100%;
+        
+    }
+  
     &__titulo{
         @include titulos;
         margin-bottom: 1rem;
@@ -23,9 +27,29 @@
 
     }
 
+    &__customizacao{
+        @include tablet{
+           display: flex;
+            
+        }
+
+        @include phone{
+            flex-direction: column
+        }
+    }
+
     &__linguagem{
         @include input-text;
-        margin-bottom: 1rem;  
+        margin-bottom: 1rem; 
+        width: 100%;
+
+        @include tablet{
+           margin-right: 1rem;
+             
+        }
+
+        
+       
 
     }
 
@@ -39,10 +63,15 @@
     }
 
     &__botao{
-        margin-top: 2.5rem;
+        margin-top: 3.5rem;
         @include botao;
         background-color: $blue-300;
         color: $dark-blue;
+
+        @include tablet{
+            margin-top: 1rem;
+              
+        }
 
     }
 

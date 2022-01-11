@@ -3,6 +3,17 @@
     grid-template-columns: 0.9fr 2.5fr .9fr ;
     align-items: center;
     gap: 2.5rem;
+
+
+    @include tablet{
+        grid-template-columns: 0.9fr 2.5fr .2fr ;
+           
+    }
+
+    @include phone{
+        grid-template-columns: 0.9fr 2.5fr .2fr ;
+        gap: 1.2rem;
+    }
     
 
     &__logo {
@@ -19,7 +30,33 @@
         height: 56px;
         @include input-text; 
         justify-self: center;
+
+        @include phone{
+            width: 0;
+            background-image:url(../../image/lupa.svg);
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-color:$dark-blue ;
+            justify-self: end;
+            
+               
+        }
        
+    }
+
+    &__menu{
+        display: none;
+        width: 20px;
+        height: 17.5px;
+        justify-self: end;
+        background: url(../../image/hamburguer.svg) no-repeat ;
+
+
+        @include tablet{
+            display: block;
+               
+        }
+
     }
 
     &__usuario {
@@ -29,6 +66,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @include tablet{
+           display: none;
+              
+        }
 
         .usuario__foto{
             width: 32px;
