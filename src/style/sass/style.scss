@@ -6,6 +6,9 @@ $dark-gray: #141414;
 $white: #FFFFFF;
 $inactive:#919ca9;
 $background-gray:rgba(255, 255, 255, 0.16);
+$background-button: rgba(80, 129, 251, 0.08);
+$background-editorSocial: rgba(0, 0, 0, 0.16);
+
 
 @mixin input-text {
     border-radius: 8px;
@@ -48,7 +51,7 @@ $background-gray:rgba(255, 255, 255, 0.16);
 
 
 
-@import 'header', 'project', 'sidebar-left', 'sidebar-right', 'editor-codes';
+@import 'header', 'project', 'sidebar-left', 'sidebar-right', 'editor-codes', 'community';
 
 
 body {
