@@ -49,8 +49,8 @@
 
         <section class="dados-projeto">
             <p class="dados-projeto__titulo">Seu projeto</p>
-            <input type="text" class="dados-projeto__nome" placeholder="Nome do seu projeto">
-            <input class="dados-projeto__descricao" placeholder="Descrição do seu projeto"></input>
+            <input type="text" class="dados-projeto__nome" placeholder="Nome do seu projeto" data-dados="nome">
+            <input class="dados-projeto__descricao" placeholder="Descrição do seu projeto" data-dados="descricao"></input>
             <p class="dados-projeto__titulo">personalização</p>
             <div class="dados-projeto__customizacao">
                 <select class="dados-projeto__linguagem" data-dados="linguagem" name="linguagem" id="linguagem">
@@ -61,12 +61,13 @@
                 <input class="dados-projeto__cor" type="color" data-dados="color" value="#6Bd1FF"></input>
 
             </div>
-            <button class="dados-projeto__botao">Salvar projeto</button>
+            <button class="dados-projeto__botao" data-dados="salvar">Salvar projeto</button>
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script src="./src/js/highlight.js"></script>
     <script src="./src/js/editorColor.js"></script>
+    <script src="./src/js/saveButton.js"></script>
 
 </body>
 </html>
