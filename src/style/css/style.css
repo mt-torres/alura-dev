@@ -51,6 +51,7 @@
   height: 17.5px;
   justify-self: end;
   background: url(../../image/hamburguer.svg) no-repeat;
+  cursor: pointer;
 }
 @media (max-width: 900px) {
   .cabecalho__menu {
@@ -142,6 +143,29 @@
 .menu-lateral__link--comunidade-inativo {
   background: url(../../image/comunidadeAtivo.svg) no-repeat center #5081FB;
   opacity: 0.16;
+}
+
+.menu-flutuante {
+  display: none;
+  position: absolute;
+  right: -300px;
+  top: 55px;
+  background-color: #051D3B;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: -20px 16px 26px black;
+  transition: right 0.5s ease-in-out;
+  z-index: 2;
+}
+@media (max-width: 900px) {
+  .menu-flutuante {
+    display: block;
+  }
+}
+
+.menu-flutuante--shown {
+  right: 0;
+  z-index: 2;
 }
 
 .dados-projeto {
@@ -457,6 +481,7 @@ body {
   margin: 2rem;
   border-radius: 40px;
   position: relative;
+  overflow-x: hidden;
 }
 @media (max-width: 460px) {
   body {

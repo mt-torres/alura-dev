@@ -2,6 +2,11 @@ const containerCode = document.querySelector("[data-social=container]");
 const erro = document.querySelector('[data-erro=container]');
 
 
+function mensagemErro(elemento){
+    elemento.style.display = 'block';
+    elemento.style.left = '50%';
+    
+}
 
 
 function criaCards(item,index){
@@ -47,8 +52,12 @@ export async function carregaCards(database){
             database.map((item,index) => {
             criaCards(item,index)
     
-            });   
+            });  
+            
+            console.log(database)
         }
+
+
         catch(ex) {
             mensagemErro(erro)
             

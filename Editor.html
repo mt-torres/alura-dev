@@ -16,7 +16,7 @@
     <header class="cabecalho">
         <div class="cabecalho__logo"></div>
         <input class="cabecalho__busca" type="text" placeholder="Busque por algo" />
-        <div class="cabecalho__menu"></div>
+        <div class="cabecalho__menu" data-header="menu-hamburger"></div>
         <div class="cabecalho__usuario">
             <img class="usuario__foto" src="./src/image/cracha.png" alt="">
             <p class="usuario__nome">Marcos</p>
@@ -32,6 +32,16 @@
                 <li class="menu-lateral__item menu-lateral__item--inativo"><a
                         class="menu-lateral__link menu-lateral__link--comunidade-inativo" href="./comunidade.html"></a>Comunidade</li>
             </ul>
+        </nav>
+            <nav class="menu-lateral menu-flutuante" data-menu="menu-flutuante">
+                <p class="menu-lateral__titulo">menu</p>
+                <ul class="menu-lateral__lista">
+                    <li class="menu-lateral__item"><a class="menu-lateral__link menu-lateral__link--editor"
+                            href="#"></a>Editor
+                        de código</li>
+                    <li class="menu-lateral__item menu-lateral__item--inativo"><a
+                            class="menu-lateral__link menu-lateral__link--comunidade-inativo" href="./comunidade.html"></a>Comunidade</li>
+                </ul>
         </nav>
 
         <section class="projeto-codigo">
@@ -68,6 +78,7 @@
     <script type="module" src="./src/js/highlight.js"></script>
     <script type="module" src="./src/js/editorColor.js"></script>
     <script type="module" src="./src/js/saveButton.js"></script>
+    <script src="./src/js/screenEffects.js"></script>
 
 </body>
 </html>
