@@ -36,8 +36,33 @@
             background-image:url(../../image/lupa.svg);
             background-repeat: no-repeat;
             background-position-y: center;
+            background-position-x: 15px;
             background-color:$dark-blue ;
             justify-self: end;
+            transition: width .5s linear;
+            cursor: pointer;
+            padding-left: 3rem;
+
+
+            &:hover{
+                @include input-text;
+                width: 170px;
+                padding-left: 3rem;
+                background-image:url(../../image/lupa.svg); 
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: 15px;
+
+            }
+            &:focus{
+                @include input-text;
+                width: 170px;
+                padding-left: 3rem;
+                background-image:url(../../image/lupa.svg); 
+                background-position-x: 15px;
+                background-repeat: no-repeat ;
+                background-position-y: center;
+            }
             
                
         }
