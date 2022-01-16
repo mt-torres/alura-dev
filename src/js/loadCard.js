@@ -1,17 +1,16 @@
-
-const projetos = JSON.parse(localStorage.getItem("projetos"));
 const containerCode = document.querySelector("[data-social=container]");
+const erro = document.querySelector('[data-erro=container]');
 
-//console.log(projetos[3].codigo)
 
-function criaCards(item){
+
+
+function criaCards(item,index){
     containerCode.insertAdjacentHTML(
         "beforeend",
         /*html*/
-        ` <div class="projeto-codigo projeto-codigo--social">
-    <div class="projeto-codigo__container projeto-codigo__container--social"  data-codigo="color" style="background-color:${
-      item.cor
-    }">
+        ` <div class="projeto-codigo projeto-codigo--social" data-index=${index}>
+        <span class="projeto-codigo__fechar" data-codigo="fechar"></span>
+    <div class="projeto-codigo__container projeto-codigo__container--social"  data-codigo="color" style="background-color:${item.cor}">
         <div class="circulos">
             <div class="circulos__vermelho"></div>
             <div class="circulos__amarelo"></div>
@@ -39,15 +38,22 @@ function criaCards(item){
     );
 }
 
-window.addEventListener("load", () => {
-    projetos.map((item) => {
-         criaCards(item)
-  
-    });   
 
-      
-});
+export async function carregaCards(database){
 
-
-
-
+     window.addEventListener("load", () => {
+    
+        try{
+            database.map((item,index) => {
+            criaCards(item,index)
+    
+            });   
+        }
+        catch(ex) {
+            mensagemErro(erro)
+            
+        }
+    
+          
+    });
+}
