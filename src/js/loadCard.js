@@ -1,12 +1,7 @@
+import { mensagemErro } from "./mensagem.js";
+
 const containerCode = document.querySelector("[data-social=container]");
-const erro = document.querySelector('[data-erro=container]');
 
-
-function mensagemErro(elemento){
-    elemento.style.display = 'block';
-    elemento.style.left = '50%';
-    
-}
 
 
 function criaCards(item,index){
@@ -44,7 +39,7 @@ function criaCards(item,index){
 }
 
 
-export async function carregaCards(database){
+export  function carregaCards(database){
 
      window.addEventListener("load", () => {
     
@@ -54,12 +49,11 @@ export async function carregaCards(database){
     
             });  
             
-            console.log(database)
         }
 
 
         catch(ex) {
-            mensagemErro(erro)
+            mensagemErro('nulo')
             
         }
     

@@ -1,11 +1,10 @@
 import { inputColor } from "./editorColor.js";
+import { mensagemErro } from "./mensagem.js";
 
 const nomeProjeto = document.querySelector("[data-dados=nome]");
 const descricaoProjeto = document.querySelector("[data-dados=descricao]");
 const boatoaSalvar = document.querySelector("[data-dados=salvar]");
 const codigo = document.querySelector("[data-codigo=code]");
-
-
 
 
 function salvarProjetos(){
@@ -33,6 +32,9 @@ function salvarProjetos(){
 
 
 
-boatoaSalvar.addEventListener('click', salvarProjetos)
+boatoaSalvar.addEventListener('click', ()=>{
+     salvarProjetos()
+     mensagemErro('salvo')
+})
 
 
