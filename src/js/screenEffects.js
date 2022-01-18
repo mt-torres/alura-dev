@@ -3,5 +3,6 @@ const menuHamburger = document.querySelector('[data-header=menu-hamburger]');
 
 menuHamburger.addEventListener('click',()=>{
     menuFlutuante.classList.toggle('menu-flutuante--shown')
+    
 
 })

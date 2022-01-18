@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/css/reset.css">
+    <link rel="stylesheet" href="./src/style/css/highlightjs.css">
+    <link rel="stylesheet" href="./src/style/css/style.css">
+    <title>AluraDEV</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__logo"></div>
+        <input class="cabecalho__busca" type="text" placeholder="Busque por algo" />
+        <div class="cabecalho__menu" data-header="menu-hamburger"></div>
+        <div class="cabecalho__usuario">
+            <img class="usuario__foto" src="./src/image/cracha.png" alt="">
+            <p class="usuario__nome">Marcos</p>
+        </div>
+    </header>
+    <main class="projeto" data-projeto="main">
+        <nav class="menu-lateral">
+            <p class="menu-lateral__titulo">menu</p>
+            <ul class="menu-lateral__lista">
+                <li class="menu-lateral__item"><a class="menu-lateral__link menu-lateral__link--editor"
+                        href="#"></a>Editor
+                    de código</li>
+                <li class="menu-lateral__item menu-lateral__item--inativo"><a
+                        class="menu-lateral__link menu-lateral__link--comunidade-inativo" href="./comunidade.html"></a>Comunidade</li>
+            </ul>
+        </nav>
+            <nav class="menu-lateral menu-flutuante" data-menu="menu-flutuante">
+                <p class="menu-lateral__titulo">menu</p>
+                <ul class="menu-lateral__lista">
+                    <li class="menu-lateral__item"><a class="menu-lateral__link menu-lateral__link--editor"
+                            href="#"></a>Editor
+                        de código</li>
+                    <li class="menu-lateral__item menu-lateral__item--inativo"><a
+                            class="menu-lateral__link menu-lateral__link--comunidade-inativo" href="./comunidade.html"></a>Comunidade</li>
+                </ul>
+        </nav>
+
+        <section class="projeto-codigo">
+            <div class="projeto-codigo__container" data-codigo="color">
+                <div class="circulos">
+                   <div class="circulos__vermelho"></div><div class="circulos__amarelo"></div><div class="circulos__verde"></div> 
+                </div>
+                <div class="projeto-codigo__code-area" data-codigo="code-area">
+                    <code class="projeto-codigo__editor" spellcheck="false" data-codigo="code" contenteditable="true"></code>
+                </div>
+
+            </div>
+            <button class="projeto-codigo__botao" data-codigo="button">Visualizar com o highlight</button>
+        </section>
+
+        <section class="dados-projeto">
+            <p class="dados-projeto__titulo">Seu projeto</p>
+            <input type="text" class="dados-projeto__nome" placeholder="Nome do seu projeto" data-dados="nome">
+            <input class="dados-projeto__descricao" placeholder="Descrição do seu projeto" data-dados="descricao"></input>
+            <p class="dados-projeto__titulo">personalização</p>
+            <div class="dados-projeto__customizacao">
+                <select class="dados-projeto__linguagem" data-dados="linguagem" name="linguagem" id="linguagem">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </select>
+                <input class="dados-projeto__cor" type="color" data-dados="color" value="#6Bd1FF"></input>
+
+            </div>
+            <button class="dados-projeto__botao" data-dados="salvar">Salvar projeto</button>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script type="module" src="./src/js/highlight.js"></script>
+    <script type="module" src="./src/js/editorColor.js"></script>
+    <script type="module" src="./src/js/saveButton.js"></script>
+    <script src="./src/js/screenEffects.js"></script>
+
+</body>
+</html>

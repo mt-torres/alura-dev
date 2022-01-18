@@ -57,7 +57,7 @@
     padding: 1rem;
     color: inherit;
     box-sizing: border-box;
-    width: 170px;
+    width: 90px;
     padding-left: 3rem;
     background-image: url(../../image/lupa.svg);
     background-repeat: no-repeat;
@@ -184,23 +184,24 @@
 .menu-flutuante {
   display: none;
   position: absolute;
-  right: -300px;
+  opacity: 0;
+  right: 0;
   top: 55px;
   background-color: #051D3B;
   padding: 1rem;
   border-radius: 15px;
   box-shadow: -20px 16px 26px black;
-  transition: right 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   z-index: 2;
 }
 @media (max-width: 900px) {
   .menu-flutuante {
-    display: block;
+    display: flex;
   }
 }
 
 .menu-flutuante--shown {
-  right: 0;
+  opacity: 1;
   z-index: 2;
 }
 
@@ -512,6 +513,11 @@
 }
 .erro__mensagem {
   line-height: 40px;
+}
+@media (max-width: 900px) {
+  .erro {
+    width: 100%;
+  }
 }
 
 body {

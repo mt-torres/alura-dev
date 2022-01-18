@@ -17,4 +17,9 @@
          line-height: 40px;
         
     }
+
+    @include tablet{
+        width: 100%;
+        
+    }
 }
