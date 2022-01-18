@@ -70,12 +70,11 @@
     border-radius: 15px;
     box-shadow: -20px 16px 26px black;
     transition: opacity .5s ease-in-out;
-    z-index: 2;
+    z-index: 0;
 
     @include tablet{
         display: flex;
          
-        
         
     }
 

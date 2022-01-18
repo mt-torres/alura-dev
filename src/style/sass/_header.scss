@@ -12,14 +12,20 @@
 
     @include phone{
         grid-template-columns: 0.9fr 2.5fr .2fr ;
-        gap: 1.2rem;
+        gap: .5rem;
     }
     
 
     &__logo {
-        background-image: url(../../image/Logo.svg);
+        background: url(../../image/Logo.svg) no-repeat;
         width: 145px;
         height: 34.05px;
+
+        @include phone{
+            background-size: 120px;
+            width: 120px;
+
+        }
         
     }
 
@@ -56,8 +62,8 @@
             }
             &:focus{
                 @include input-text;
-                width: 170px;
-                padding-left: 3rem;
+                width: 100%;
+                padding-left: 2.5rem;
                 background-image:url(../../image/lupa.svg); 
                 background-position-x: 15px;
                 background-repeat: no-repeat ;
