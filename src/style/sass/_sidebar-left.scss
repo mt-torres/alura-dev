@@ -71,6 +71,7 @@
     box-shadow: -20px 16px 26px black;
     transition: opacity .5s ease-in-out;
     z-index: 0;
+    visibility: hidden;
 
     @include tablet{
         display: flex;
@@ -81,7 +82,7 @@
 }
 
 .menu-flutuante--shown{
+    visibility: visible;
     opacity: 1;
-    //right: 0;
     z-index: 2;
 }
