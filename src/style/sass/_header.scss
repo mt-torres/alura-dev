@@ -91,29 +91,4 @@
 
     }
 
-    &__usuario {
-        justify-self: end;
-        width: 106px;
-        height: 56px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        @include tablet{
-           display: none;
-              
-        }
-
-        .usuario__foto{
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-        }
-    
-        .usuario__foto {
-            font-size: 1rem;
-    
-        }
-    }
-
 }

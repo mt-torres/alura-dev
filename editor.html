@@ -17,9 +17,14 @@
         <div class="cabecalho__logo"></div>
         <input class="cabecalho__busca" type="text" placeholder="Busque por algo" />
         <div class="cabecalho__menu" data-header="menu-hamburger"></div>
-        <div class="cabecalho__usuario">
-            <img class="usuario__foto" src="./src/image/cracha.png" alt="">
-            <p class="usuario__nome">Marcos</p>
+        <div class="cabecalho__usuario" data-header="usuario">
+           <button class="login__button" data-header="button-login">login</button>
+           <form class="login__form" data-header="login-form">
+               <p class="form__title" >Entre com seu usuário do GitHub</p>
+               <input type="text" class="form__user" placeholder="Usuário GitHub" data-header="form-user"></input>
+               <div class="form__loading spinner form__loading--hide" data-header="form-spinner"></div>
+               <button class="form__button" data-header="form-button">Entrar</button>
+           </form>
         </div>
     </header>
     <main class="projeto" data-projeto="main">
@@ -79,6 +84,7 @@
     <script type="module" src="./src/js/editorColor.js"></script>
     <script type="module" src="./src/js/saveButton.js"></script>
     <script src="./src/js/screenEffects.js"></script>
+    <script src="./src/js/services/git.js"></script>
 
 </body>
 </html>

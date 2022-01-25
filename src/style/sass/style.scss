@@ -48,6 +48,7 @@ $background-editorSocial: rgba(0, 0, 0, 0.16);
   
 }
 
+
 @mixin monitor {
     @media (min-width: 1440px) {@content}
     
@@ -64,7 +65,8 @@ $background-editorSocial: rgba(0, 0, 0, 0.16);
 
 
 
-@import 'header', 'project', 'sidebar-left', 'sidebar-right', 'editor-codes', 'community', 'error';
+
+@import 'header', 'project', 'sidebar-left', 'sidebar-right', 'editor-codes', 'community', 'error','login-form', 'spiner';
 
 
 body {

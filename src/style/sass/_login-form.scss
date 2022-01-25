@@ -1,0 +1,167 @@
+.cabecalho__usuario {
+    justify-self: end;
+    max-width: 250px;
+    height: 56px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include tablet{
+       display: none;
+          
+    }
+
+    .usuario__foto{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    .usuario__nome {
+        margin-left: .5rem;
+        font-size: 1rem;
+        width: 100%
+
+    }
+    .login__button{
+        @include botao;
+        background-color: $blue-300;
+        width: 250px;
+
+    }
+
+   
+
+    .login__form{
+        visibility: hidden;
+        position: absolute;
+        max-width: 500px;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: $white;
+
+        padding: 1.5rem;
+
+        box-sizing: border-box;
+        border-radius: 15px;
+
+        .form__title{
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: $dark-gray;
+
+            &::after{
+              content: url(../../image/GitHub-Mark-32px.png);
+              margin-left: .3rem
+            }
+        }
+
+        .form__user{
+            @include input-text;
+            margin-bottom: 1rem;
+            background-color: black;
+            opacity: 0.7;
+        
+        }
+
+        .form__loading{
+           align-self: center;
+        }
+
+        .form__loading--hide{
+            visibility: hidden;
+            display: none;
+        }
+                    
+
+        .form__button{
+            @include botao;
+            width: 50%;
+            background-color: $blue-300;
+            align-self: center;
+           
+        }
+
+        .form__button--hide{
+            visibility: hidden;
+            display: none;
+        }
+
+        .form__mensagem{
+            color: $dark-gray;
+            height: 56px;
+            align-self: center;
+            
+
+            &--sucesso{
+                color: green;
+            }
+
+            &--erro{
+                height: 10px;
+                color: red;
+                margin-top: 1rem;
+            }
+
+        }
+
+    }
+
+    .login__form--show{
+        visibility: visible;
+        animation: show .5s  ease-in; 
+
+        @keyframes show {
+            0% {
+                transform: scale(.7);
+              }
+              45% {
+                transform: scale(1.05);
+              }
+              80% {
+                transform: scale(.95);
+              }
+              100% {
+                transform: scale(1);
+              }
+        }
+    }
+    .login__form--hide{
+        
+        animation: hide .5s  ease-in; 
+
+        @keyframes hide {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+              }
+              45% {
+                transform: scale(.95);
+                opacity: .7;
+              }
+              80% {
+                transform: scale(.65);
+                opacity: .35;
+              }
+              100% {
+                transform: scale(.5);
+                opacity: 0;
+                
+              }
+        }
+    }
+}

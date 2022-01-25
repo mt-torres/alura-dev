@@ -100,27 +100,6 @@
     display: block;
   }
 }
-.cabecalho__usuario {
-  justify-self: end;
-  width: 106px;
-  height: 56px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (max-width: 900px) {
-  .cabecalho__usuario {
-    display: none;
-  }
-}
-.cabecalho__usuario .usuario__foto {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-.cabecalho__usuario .usuario__foto {
-  font-size: 1rem;
-}
 
 .projeto {
   margin-top: 2.5rem;
@@ -530,6 +509,173 @@
 @media (max-width: 900px) {
   .erro {
     width: 100%;
+  }
+}
+
+.cabecalho__usuario {
+  justify-self: end;
+  max-width: 250px;
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .cabecalho__usuario {
+    display: none;
+  }
+}
+.cabecalho__usuario .usuario__foto {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.cabecalho__usuario .usuario__nome {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+.cabecalho__usuario .login__button {
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #5081FB;
+  width: 250px;
+}
+.cabecalho__usuario .login__form {
+  visibility: hidden;
+  position: absolute;
+  max-width: 500px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.cabecalho__usuario .login__form .form__title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #141414;
+}
+.cabecalho__usuario .login__form .form__title::after {
+  content: url(../../image/GitHub-Mark-32px.png);
+  margin-left: 0.3rem;
+}
+.cabecalho__usuario .login__form .form__user {
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.16);
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: inherit;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  background-color: black;
+  opacity: 0.7;
+}
+.cabecalho__usuario .login__form .form__loading {
+  align-self: center;
+}
+.cabecalho__usuario .login__form .form__loading--hide {
+  visibility: hidden;
+  display: none;
+}
+.cabecalho__usuario .login__form .form__button {
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 50%;
+  background-color: #5081FB;
+  align-self: center;
+}
+.cabecalho__usuario .login__form .form__button--hide {
+  visibility: hidden;
+  display: none;
+}
+.cabecalho__usuario .login__form .form__mensagem {
+  color: #141414;
+  height: 56px;
+  align-self: center;
+}
+.cabecalho__usuario .login__form .form__mensagem--sucesso {
+  color: green;
+}
+.cabecalho__usuario .login__form .form__mensagem--erro {
+  height: 10px;
+  color: red;
+  margin-top: 1rem;
+}
+.cabecalho__usuario .login__form--show {
+  visibility: visible;
+  animation: show 0.5s ease-in;
+}
+@keyframes show {
+  0% {
+    transform: scale(0.7);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cabecalho__usuario .login__form--hide {
+  animation: hide 0.5s ease-in;
+}
+@keyframes hide {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(0.65);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #5081FB;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

@@ -45,5 +45,6 @@ Or just acess [mt-torres.github.io/alura-dev/editor.html](https://mt-torres.gith
 - Improve alerts messages
 - Add feature to take code screenshots
 - Include form validations 
-- Add GitHub API to validate user login
+- Add GitHub API to validate user login :heavy_check_mark:
 - Refactor and organize Javascript code 
+- Enable search bar
