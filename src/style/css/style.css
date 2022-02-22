@@ -422,6 +422,7 @@
   width: 20px;
   position: absolute;
   background-image: url(../../image/fechar.svg);
+  background-repeat: no-repeat;
   right: 10px;
   top: 8px;
   cursor: pointer;
@@ -565,6 +566,9 @@
   padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 15px;
+}
+.cabecalho__usuario .login__form .projeto-codigo__fechar--shown {
+  opacity: 1;
 }
 .cabecalho__usuario .login__form .form__title {
   display: flex;

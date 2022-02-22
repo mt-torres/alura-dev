@@ -6,11 +6,12 @@ const descricaoProjeto = document.querySelector("[data-dados=descricao]");
 const boatoaSalvar = document.querySelector("[data-dados=salvar]");
 const codigo = document.querySelector("[data-codigo=code]");
 
-
 function salvarProjetos(){
     
     const projeto = JSON.parse(localStorage.getItem('projetos')) || [];
     const dados = {
+        usuario: document.querySelector("[data-header=login-usuario]").textContent,
+        avatar: document.querySelector("[data-header=login-avatar]").src,
         nome: nomeProjeto.value,
         descricao: descricaoProjeto.value,
         codigo : codigo.innerHTML,
@@ -29,12 +30,7 @@ function salvarProjetos(){
 
 }
 
-
-
-
 boatoaSalvar.addEventListener('click', ()=>{
      salvarProjetos()
      mensagemErro('salvo')
 })
-
-

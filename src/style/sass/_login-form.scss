@@ -57,6 +57,10 @@
         box-sizing: border-box;
         border-radius: 15px;
 
+        .projeto-codigo__fechar--shown{
+            opacity: 1;
+        }
+
         .form__title{
             display: flex;
             align-items: center;
