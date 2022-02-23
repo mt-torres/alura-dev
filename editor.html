@@ -2,6 +2,20 @@
 <html lang="bt-br">
 
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-221100777-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-221100777-2');
+    </script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +24,8 @@
     <link rel="stylesheet" href="./src/style/css/highlightjs.css">
     <link rel="stylesheet" href="./src/style/css/style.css">
     <title>AluraDEV</title>
+
+
 </head>
 
 <body>
@@ -18,14 +34,14 @@
         <input class="cabecalho__busca" type="text" placeholder="Busque por algo" />
         <div class="cabecalho__menu" data-header="menu-hamburger"></div>
         <div class="cabecalho__usuario" data-header="usuario">
-           <button class="login__button" data-header="button-login">login</button>
-           <form class="login__form" data-header="login-form">
-               <span class="projeto-codigo__fechar projeto-codigo__fechar--shown" data-header="close-login"></span>
-               <p class="form__title" >Entre com seu usuário do GitHub</p>
-               <input type="text" class="form__user" placeholder="Usuário GitHub" data-header="form-user"></input>
-               <div class="form__loading spinner form__loading--hide" data-header="form-spinner"></div>
-               <button class="form__button" data-header="form-button">Entrar</button>
-           </form>
+            <button class="login__button" data-header="button-login">login</button>
+            <form class="login__form" data-header="login-form">
+                <span class="projeto-codigo__fechar projeto-codigo__fechar--shown" data-header="close-login"></span>
+                <p class="form__title">Entre com seu usuário do GitHub</p>
+                <input type="text" class="form__user" placeholder="Usuário GitHub" data-header="form-user"></input>
+                <div class="form__loading spinner form__loading--hide" data-header="form-spinner"></div>
+                <button class="form__button" data-header="form-button">Entrar</button>
+            </form>
         </div>
     </header>
     <main class="projeto" data-projeto="main">
@@ -36,27 +52,32 @@
                         href="#"></a>Editor
                     de código</li>
                 <li class="menu-lateral__item menu-lateral__item--inativo"><a
-                        class="menu-lateral__link menu-lateral__link--comunidade-inativo" href="./comunidade.html"></a>Comunidade</li>
+                        class="menu-lateral__link menu-lateral__link--comunidade-inativo"
+                        href="./comunidade.html"></a>Comunidade</li>
             </ul>
         </nav>
-            <nav class="menu-lateral menu-flutuante" data-menu="menu-flutuante">
-                <p class="menu-lateral__titulo">menu</p>
-                <ul class="menu-lateral__lista">
-                    <li class="menu-lateral__item"><a class="menu-lateral__link menu-lateral__link--editor"
-                            href="#"></a>Editor
-                        de código</li>
-                    <li class="menu-lateral__item menu-lateral__item--inativo"><a
-                            class="menu-lateral__link menu-lateral__link--comunidade-inativo" href="./comunidade.html"></a>Comunidade</li>
-                </ul>
+        <nav class="menu-lateral menu-flutuante" data-menu="menu-flutuante">
+            <p class="menu-lateral__titulo">menu</p>
+            <ul class="menu-lateral__lista">
+                <li class="menu-lateral__item"><a class="menu-lateral__link menu-lateral__link--editor"
+                        href="#"></a>Editor
+                    de código</li>
+                <li class="menu-lateral__item menu-lateral__item--inativo"><a
+                        class="menu-lateral__link menu-lateral__link--comunidade-inativo"
+                        href="./comunidade.html"></a>Comunidade</li>
+            </ul>
         </nav>
 
         <section class="projeto-codigo">
             <div class="projeto-codigo__container" data-codigo="color">
                 <div class="circulos">
-                   <div class="circulos__vermelho"></div><div class="circulos__amarelo"></div><div class="circulos__verde"></div> 
+                    <div class="circulos__vermelho"></div>
+                    <div class="circulos__amarelo"></div>
+                    <div class="circulos__verde"></div>
                 </div>
                 <div class="projeto-codigo__code-area" data-codigo="code-area">
-                    <code class="projeto-codigo__editor" spellcheck="false" data-codigo="code" contenteditable="true" ></code>
+                    <code class="projeto-codigo__editor" spellcheck="false" data-codigo="code"
+                        contenteditable="true"></code>
                 </div>
 
             </div>
@@ -66,7 +87,8 @@
         <section class="dados-projeto">
             <p class="dados-projeto__titulo">Seu projeto</p>
             <input type="text" class="dados-projeto__nome" placeholder="Nome do seu projeto" data-dados="nome">
-            <input class="dados-projeto__descricao" placeholder="Descrição do seu projeto" data-dados="descricao"></input>
+            <input class="dados-projeto__descricao" placeholder="Descrição do seu projeto"
+                data-dados="descricao"></input>
             <p class="dados-projeto__titulo">personalização</p>
             <div class="dados-projeto__customizacao">
                 <select class="dados-projeto__linguagem" data-dados="linguagem" name="linguagem" id="linguagem">
@@ -88,4 +110,5 @@
     <script src="./src/js/services/git.js"></script>
 
 </body>
+
 </html>
