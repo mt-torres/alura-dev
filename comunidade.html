@@ -12,15 +12,20 @@
   gtag('config', 'AW-10855164291', { ' allow_enhanced_conversions' : true });
 </script>
 <script>
+    const telefone = localStorage.getItem('g_phone_number');
+    const email = localStorage.getItem('g_email');  
+
     var enhanced_conversion_data = {};
     
     if(window.location.pathname.includes('comunidade')) {
     
         console.log("Thank you");
         
-        enhanced_conversion_data.email = enhanced_conversion_data.email,
+        enhanced_conversion_data.email = email;
         
-        enhanced_conversion_data.phone_number = enhanced_conversion_data.phone_number
+        enhanced_conversion_data.phone_number = telefone;
+
+        console.log(enhanced_conversion_data)
         
         gtag('event', 'conversion', {'send_to': 'AW-10855164291/zNQ_CLH9uKoDEIPTkrgo'});
     }    
